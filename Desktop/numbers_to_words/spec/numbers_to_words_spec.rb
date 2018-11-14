@@ -10,4 +10,7 @@ describe('#convert_numbers') do
   it("if the length of the number is 1 decimal, convert the number to a word") do
     expect(8.convert_numbers()).to(eq("eight"))
   end
+  it("if the length of the number is 2 decimals, convert the number to a word") do
+    expect(55.convert_numbers()).to(eq("fity-five"))
+  end
 end

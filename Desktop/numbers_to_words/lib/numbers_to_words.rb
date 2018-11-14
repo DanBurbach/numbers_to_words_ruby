@@ -2,7 +2,6 @@ class Integer
   def convert_numbers
     number = self.to_s
     split_number = number.split(//)
-    first_digit = split_number[0]
     length = split_number.length
     ones = Hash.new
     ones.store("1","one")
@@ -37,7 +36,9 @@ class Integer
     hundreds.store("8","eight-hundred")
     hundreds.store("9","nine-hundred")
     if (length == 1)
-      return ones.fetch(first_digit)
+      return ones.fetch(split_number[0])
+    elsif (length == 2)
+      return tens.fetch(split_number[0]) + '-' + ones.fetch(split_number[1])
     end
   end
 end
