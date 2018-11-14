@@ -8,6 +8,6 @@ describe('#convert_numbers') do
   #  expect(1.convert_numbers()).to(eq("one"))
   #end
   it("evaluates the length of the number up to one trillion") do
-    expect(1000000000000.convert_numbers()).to(eq("one"))
+    expect(1.convert_numbers()).to(eq("one"))
   end
 end
