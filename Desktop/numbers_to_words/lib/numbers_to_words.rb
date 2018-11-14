@@ -1,19 +1,47 @@
 class Integer
   def convert_numbers
     number = self.to_s
-    new_array = number.split(//)
-    one_thru_nine = Hash.new {"1" = one, "2" = two, "3" = three,  "4" = four,  "5" = five, "6" = six, "7" = seven,  "8" = eight, "9" = nine}
+    split_number = number.split(//)
+    length = split_number.length
+    ones = Hash.new
+    ones.store(1,"one")
+    ones.store(2,"two")
+    ones.store(3,"three")
+    ones.store(4,"four")
+    ones.store(5,"five")
+    ones.store(6,"six")
+    ones.store(7,"seven")
+    ones.store(8,"eight")
+    ones.store(9,"nine")
 
-    ten_thru_nineteen = Hash.new {"10" = ten, "11" = eleve, "12" = twelve, "13" = thirteen, "14" = fourteen, "15" = fifteen, "16" = sixteen, "17" = seventeen, "18" = eighteen, "19" = nineteen}
+    tens = Hash.new
+    tens.store(1,"ten")
+    tens.store(2,"twenty")
+    tens.store(3,"thirty")
+    tens.store(4,"fourty")
+    tens.store(5,"fity")
+    tens.store(6,"sixty")
+    tens.store(7,"seventy")
+    tens.store(8,"eighty")
+    tens.store(9,"ninety")
 
-    twenty_through_nintety = Hash.new {"20" = twenty, "30" = thirty, "40" = fourty, "50" = fifty, "60" = sixty, "70" = seventy, "80" = eighty, "90" = ninety}
-
-    hundreds = Hash.new {"100" = one-hundred, "200" = two-hundred, "300" = three-hundred}
-
+    hundreds = Hash.new
+    hundreds.store(1,"one-hundred")
+    hundreds.store(2,"two-hundred")
+    hundreds.store(3,"three-hundred")
+    hundreds.store(4,"four-hundred")
+    hundreds.store(5,"five-hundred")
+    hundreds.store(6,"six-hundred")
+    hundreds.store(7,"seven-hundred")
+    hundreds.store(8,"eight-hundred")
+    hundreds.store(9,"nine-hundred")
+    if (length = 1)
+      length
     #binding.pry
     #if self == 1
     #  new_array.push("one")
     #end
     return new_array*' '
+    end
   end
 end
