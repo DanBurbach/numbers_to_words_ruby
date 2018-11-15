@@ -3,17 +3,28 @@ class Integer
     number = self.to_s
     split_number = number.split(//)
     chunk_number = split_number.each_slice(3).to_a
-    chunk1 = chunk_number[1].map(&:to_s)
-    chunk1str = chunk1[0]+chunk1[1]+chunk1[2]
-    chunk2 = chunk_number[2].map(&:to_s)
-    chunk2str = chunk2[0]+chunk2[1]+chunk2[2]
-    chunk3 = chunk_number[3].map(&:to_s)
-    chunk3str = chunk3[0]+chunk3[1]+chunk3[2]
-    chunk4 = chunk_number[4].map(&:to_s)
-    chunk4str = chunk4[0]+chunk4[1]+chunk4[2]
-    #length = split_number.length
+    chunk1 = chunk_number[1]
+    chunk1_1 = chunk1.slice(0).join
+    chunk1_2 = chunk1.slice(1..2).join
 
+    chunk2 = chunk_number[2]
+    chunk2_1 = chunk1.slice(0).join
+    chunk2_2 = chunk1.slice(1..2).join
 
+    chunk3 = chunk_number[3]
+    chunk3_1 = chunk1.slice(0).join
+    chunk3_2 = chunk1.slice(1..2).join
+
+    chunk4 = chunk_number[4]
+    chunk4_1 = chunk1.slice(0).join
+    chunk4_2 = chunk1.slice(1..2).join
+    def numbers_to_words(num)
+      if (num >= 1)&&(num <=19)
+        ones.fetch(num)
+      elsif (num >= 20)&&(num <= 99)
+        tens.fetch()
+      end
+    end
     def one_through_ninetynine
       number = self.to_s
       split_number = number.split(//)
